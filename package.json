@@ -1,0 +1,18 @@
+{
+  "name": "pw-aria-snapshot-yaml-nested-value-issue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  }
+}
