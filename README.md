@@ -16,7 +16,7 @@ Example regex attempt that throws the "Nested mappings are not allowed in compac
 - paragraph: /Period: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}
 ```
 
-How to escape the colon char or use the regex in this example? 
+How to escape the colon char or use the regex in this example?
 
 ## Install and run
 
