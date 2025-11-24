@@ -13,7 +13,7 @@ Example aria string:
 Example regex attempt that throws the "Nested mappings are not allowed in compact mappings":
 
 ```yaml
-- paragraph: /Period: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}
+- paragraph: /Period: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}/
 ```
 
 How to escape the colon char or use the regex in this example?
