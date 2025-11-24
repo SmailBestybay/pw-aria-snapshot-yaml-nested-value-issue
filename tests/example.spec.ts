@@ -26,6 +26,24 @@ test("has valid date format with aria snapshot", async ({ page }) => {
     - paragraph: /Period: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}/
   `);
 });
+test("has valid date format with aria snapshot and escape yaml colon", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  await expect(page.locator("p")).toMatchAriaSnapshot(`
+    - paragraph: /Period\: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}/
+  `);
+});
+
+test("quote entire value and escape colon", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.locator("p")).toMatchAriaSnapshot(`
+    - paragraph: "/Period\: \d{2}\/\d{2}\/\d{4} – \d{2}\/\d{2}\/\d{4}/"
+  `);
+});
+
 test("has valid date format with aria snapshot quotes around regex", async ({
   page,
 }) => {
