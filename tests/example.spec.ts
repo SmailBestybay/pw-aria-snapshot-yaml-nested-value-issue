@@ -44,6 +44,17 @@ test("quote entire value and escape colon", async ({ page }) => {
   `);
 });
 
+test("CURRENT WORKING SOLUTION: quote entire value, escape colon, and add more escapes in regex", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  const reg = "\\\\d{2}\\\\/\\\\d{2}\\\\/\\\\d{4}";
+  await expect(page.locator("p")).toMatchAriaSnapshot(`
+    - paragraph: "/Period\: ${reg} – ${reg}/"
+  `);
+});
+
 test("has valid date format with aria snapshot quotes around regex", async ({
   page,
 }) => {
