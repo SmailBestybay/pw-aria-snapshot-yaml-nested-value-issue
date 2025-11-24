@@ -2,6 +2,8 @@
 
 ## Summary
 
+Minimal reproduction for https://github.com/microsoft/playwright/issues/38315 
+
 Unable to use regex in aria snapshot when the value string has a colon char.
 
 Example aria string:
